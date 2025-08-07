@@ -138,3 +138,21 @@ docker-compose up --build
 - Push images to Docker Hub.
 - Deploy containers to AWS EC2, ECS, or Kubernetes.
 - Store secrets in AWS SSM or Secrets Manager.
+
+
+
+Development
+  React (npm start, localhost:3000)
+    → /api → localhost:5000 (Node.js)
+    → Local or Dev MongoDB Atlas
+
+Staging
+  React (built, served by Nginx at staging.lauv.in)
+    → /api → backend container on EC2
+    → Staging MongoDB Atlas
+
+Production
+  React (built, 
+  +d by Nginx at lauv.in)
+    → /api → backend container on EC2
+    → Production MongoDB Atlas
